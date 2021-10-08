@@ -12,7 +12,6 @@ module.exports = {
             const totalDeHabitantes = 100000;
 
             if (req.query.state != '' && req.query.dateStart != '' && req.query.dateEnd != '') {
-                console.log(req.query)
                 const { state, dateStart, dateEnd } = req.query;
 
                 const response = await axios.get(`caso/data/?state=${state}&date=${dateStart}`);
@@ -32,7 +31,7 @@ module.exports = {
                 }
 
                 const retornRequest = await post(maiorPorcentagem)
-                console.log(retornRequest.status)
+
                 if (retornRequest.status === 200 && retornRequest.statusText === 'OK') {
                     return res.status(200).json({ msg: 'Top 10 Cidades com maior Percentual de casos', maiorPorcentagem })
 
@@ -46,7 +45,7 @@ module.exports = {
             // console.log(maiorPorcentagem)
 
         } catch (err) {
-            console.log(err);
+            return res.status(404).json({ msg: 'Erro interno na api' })
         }
 
     }
