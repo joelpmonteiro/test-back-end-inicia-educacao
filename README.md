@@ -7,15 +7,15 @@ teste de desenvolvimento back end em node.js
 #### Projeto em modo de Produção
 - yarn start
 
-**Projeto em modo de desenvolvimento (Nodemon)
+#### Projeto em modo de desenvolvimento (Nodemon)
 - yarn dev
 
-**porta
+#### porta
 
 - Porta do Projeto -> 3000
 - Uso no insomnia e outros -> http://localhost:3000/
 
-** Rotas 
+#### Rotas 
 
 - GET -> "searchCases"
  ``http://localhost:3000/searchCases``
